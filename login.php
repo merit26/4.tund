@@ -51,7 +51,7 @@
 			
 			$stmt = $mysqli->prepare("SELECT id, email FROM user_sample WHERE email=? AND password=?");
 			
-			//küsimärkide asendus
+			//küsimärkide asendus s s on string string
 			$stmt->bind_param("ss", $email, $hash);
 			//ab tulnud muutujad
                 $stmt->bind_result($id_from_db, $email_from_db);
